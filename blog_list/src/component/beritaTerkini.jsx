@@ -18,9 +18,12 @@ class beritaTerkini extends React.Component {
             </div>
             {isiBeritaTerkini.map((isi,i) =>
                 <div className="isi_berita_terkini">
-                <div className="col-md-2 nomor">
-                    <h6>#{i+1}</h6>
+                <div className="col-md-12">
+                    <div className="col-md-2 nomor" style={{paddingRight:"35px", paddingLeft:"0px"}}>
+                        <h6>#{i+1}</h6>
+                    </div>
                 </div>
+                
                 <div className="judul">
                     <p>{isi}</p>
                 </div>

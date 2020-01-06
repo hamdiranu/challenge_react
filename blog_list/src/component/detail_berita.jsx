@@ -5,7 +5,7 @@ import '../assets/css/main.css';
 class detailBerita extends React.Component {
     render() {
       return (
-        <div className="col-md-6 detail_berita" style={{paddingLeft:"0px"}}>
+        <div className="col-md-6 detail_berita" style={{paddingLeft:"0px",paddingRight:"0px"}}>
             <img src={require("../assets/img/putri-ayako-dan-kei-moriya_20181031_171114.jpg")} alt="putri ayako"/>
             <div className="col-md-12 judul_detail">
                 <span >
@@ -22,7 +22,7 @@ class detailBerita extends React.Component {
                     <h4>Last update 3 mins ago</h4>
                 </span>
             </div>
-            <div className="col-md-12 love_share_down" style={{paddingRight:"93px"}}>
+            <div className="col-md-12 love_share_down" >
                 <div className="love" style={{paddingLeft:"80px"}}>
                     <img src={require("../assets/img/love_icon.png")} style={{width:"18px", height:"15px"}} alt=""/>
                 </div>

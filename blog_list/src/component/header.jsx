@@ -17,7 +17,7 @@ class Header extends React.Component {
                             <h3>KabarKabar</h3>
                         </div>
                     </div>
-                    <div className="col-md-5 option1">
+                    <div className="col-md-5 option1" style={{display:"block ruby"}}>
                         <div className="header-nav1">
                             <ul className="header-nav__list1 list-unstyled">
                                 <li>
@@ -32,9 +32,15 @@ class Header extends React.Component {
                                 <li>
                                     <a href="contact.html">Hiburan</a>
                                 </li>
-                                <li>
-                                    <a href="contact.html">Lainnya</a>
-                                </li>
+                            </ul>
+                        </div>
+                        <div class="dropdown">
+                            <button class="dropdown-toggle" type="button" data-toggle="dropdown">Lainnya
+                            </button>
+                            <ul class="dropdown-menu">
+                            <li><a href="http://localhost:3000/action_page.php?search=">Fashion</a></li>
+                            <li><a href="http://localhost:3000/action_page.php?search=">CSS</a></li>
+                            <li><a href="http://localhost:3000/action_page.php?search=">JavaScript</a></li>
                             </ul>
                         </div>
                     </div>
