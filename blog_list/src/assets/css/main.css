@@ -171,7 +171,7 @@ border: 1px solid #cddc39;
 
 .berita_terkini h5 {
     color:#0B8887;
-    padding-right: 235px;
+    padding-right: 210px;
     padding-top: 5px;
     margin: auto;
     padding-left: 10px;
@@ -180,6 +180,7 @@ border: 1px solid #cddc39;
 
 .berita_terkini a{
     color: #89E3CB;
+    font-size: 16px;
 }
 
 .berita_terkini {
@@ -210,9 +211,11 @@ border: 1px solid #cddc39;
     padding-left: 10px;
 }
 
-.judul p{
+.judul a{
     color: #009594;
     margin-bottom: 0px;
+    font-size: 18px;
+    padding-left: 15px;
 }
 
 .detail_berita {
