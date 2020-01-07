@@ -5,15 +5,16 @@ import Header from '../component/header';
 import BeritaTerkini from '../component/beritaTerkini';
 import DetailBerita from '../component/detail_berita';
 
+
 class Home extends React.Component {
-    render() {
+  render() {
       return (
         <div className="body">
           <Header/>
           <div className="container">
             <div className="row">
             <BeritaTerkini/>
-            <DetailBerita/>>
+            <DetailBerita/>
             </div>
           </div>
         </div>
