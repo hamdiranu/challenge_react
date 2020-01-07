@@ -2,10 +2,20 @@ import React from 'react';
 import '../assets/css/bootstrap.min.css';
 import '../assets/css/main.css';
 import logo from '../logo.svg';
+import { Link } from 'react-router-dom';
+
 
 class Header extends React.Component {
+    getOut = () => {
+        localStorage.removeItem("statusLogin");
+        // localStorage.clear()
+        this.props.history.push("/");
+    }
+
     render() {
-      return (
+    console.warn("cek this props is Category", this.props.isCategoryNews)
+
+    return (
         <div className="header">
             <div className="container-fluid background_header">
                 <div className="row align-items-center">
@@ -17,20 +27,20 @@ class Header extends React.Component {
                             <h3>KabarKabar</h3>
                         </div>
                     </div>
-                    <div className="col-md-5 option1" style={{display:"block ruby"}}>
+                    <div className="col-md-4 option1" style={{display:"block ruby"}}>
                         <div className="header-nav1">
                             <ul className="header-nav__list1 list-unstyled">
                                 <li>
-                                    <a href="about_me.html">Sepakbola</a>
+                                    <Link to="/news-category/:Health" onClick={e =>this.props.doClick("health")}>Health</Link>
                                 </li>
                                 <li>
-                                    <a href="about_me.html">Ekonomi</a>
+                                    <Link to="/news-category/:Sport" onClick={e => this.props.doClick("sport")}>Sport</Link>
                                 </li>
                                 <li>
-                                    <a href="experience.html">Politik</a>
+                                    <Link to="/news-category/:Technology" onClick={e =>this.props.doClick("technology")}>Technology</Link>
                                 </li>
                                 <li>
-                                    <a href="contact.html">Hiburan</a>
+                                    <Link to="/news-category/:Science" onClick={e =>this.props.doClick("science")}>Science</Link>
                                 </li>
                             </ul>
                         </div>
@@ -46,18 +56,21 @@ class Header extends React.Component {
                     </div>
                     <div className="col-md-2 search_bar">
                         <form action="/action_page.php">
-                            <input type="text" placeholder="Search.." name="search" style={{width:"150px"}}/>
-                            <button type="submit"><i class="fa fa-search"></i></button>
+                            <input onChange={e => this.props.doSearch(e)} value={this.props.cari} type="text" placeholder="Search.." name="search" style={{width:"150px"}}/>
+                            <button type="submit" ><i class="fa fa-search"></i></button>
                         </form>
                     </div>
-                    <div className="col-md-2">
+                    <div className="col-md-3">
                         <div className="header-nav1">
                             <ul className="header-nav__list1 list-unstyled">
                                 <li>
-                                    <a href="about_me.html">Masuk</a>
+                                    <Link to="/SignIn" >Masuk</Link>
                                 </li>
                                 <li>
-                                    <a href="about_me.html">Daftar</a>
+                                    <Link onClick={this.getOut}>Keluar</Link>
+                                </li>
+                                <li>
+                                    <Link to="/Profile">Profile</Link>
                                 </li>
                             </ul>
                         </div>
