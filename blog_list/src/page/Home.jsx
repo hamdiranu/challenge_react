@@ -8,6 +8,7 @@ import DetailBerita from '../component/detail_berita';
 
 class Home extends React.Component {
   render() {
+      
       return (
         <div className="body">
           <Header/>
