@@ -28,7 +28,7 @@ class BeritaTerkini extends React.Component {
                             </div>
                         </div>
                         <div className="judul">
-                            <a href="http://localhost:3000/action_page.php?search=">{isi.title}</a>
+                            <a href={isi.url}>{isi.title}</a>
                         </div>
                         </div>
                         )
