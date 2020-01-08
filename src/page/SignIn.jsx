@@ -6,6 +6,7 @@ import Header from '../component/header';
 import { withRouter } from "react-router-dom";
 import { connect } from "unistore/react";
 import { actions } from "../store";
+import { store } from "../store";
 
 class SignIn extends React.Component {
   // state = { 
@@ -44,6 +45,14 @@ class SignIn extends React.Component {
   //     });
   // };
 
+
+  getLogin = () => {
+    store.setState({ statusLogin: true });
+    console.log("cek status login", this)
+    // localStorage.clear()
+    this.props.history.push("/profile");
+  }
+
   render() {
       return (
         <div className="body">
@@ -52,9 +61,9 @@ class SignIn extends React.Component {
             <div className="col-md-4"></div>
               <div className="col-md-4" style={{border:"1px solid",paddingTop:"30px",paddingBottom:"30px", borderRadius:"20%"}}>
                 <h1>Sign In</h1>
-                <input type="text" onChange = {e=> this.changeInput(e)} placeholder="username"/><br/><br/>
-                <input type="password" onChange = {e=> this.changeInput(e)} placeholder="password"/><br/><br/>
-                <button onClick={() => this.props.getLogin()}>Sign In</button>
+                <input type="text" placeholder="username"/><br/><br/>
+                <input type="password" placeholder="password"/><br/><br/>
+                <button onClick={() => this.getLogin()}>Sign In</button>
               </div>
             <div className="col-md-4"></div>
           </div>

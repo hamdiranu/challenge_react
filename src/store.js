@@ -15,7 +15,10 @@ const initialState = {
     category:"",
     statusLogin:false,
     inputPage1:"",
-    stateToChangeFromPage: "belum berubah"
+    stateToChangeFromPage: "belum berubah",
+    name : "",
+    email : "",
+    api_key : ""
 };
 
 export const store = createStore(initialState);
@@ -53,18 +56,7 @@ export const actions = store => ({
                 // console.log(error)
             });
     },
-
-    getOut : () => {
-        store.setState({ statusLogin: false});
-        // localStorage.clear()
-        this.props.history.push("/");
-    },
-
-    getLogin : () => {
-        store.setState({ statusLogin: true});
-        // localStorage.clear()
-        this.props.history.push("/profile");
-    },
+    
 
     goBackHome : () => {
         store.setState({isLoadingBeritaTerkini : true});

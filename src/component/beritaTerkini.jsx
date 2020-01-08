@@ -17,14 +17,18 @@ class BeritaTerkini extends React.Component {
             return (
                 <div className="col-md-5">
                     <div className="berita_terkini">
-                        <h5>BERITA TERKINI</h5>
-                        <a href="about_me.html">lihat semua</a>
+                        <div className="col-8">
+                            <h5>BERITA TERKINI</h5>
+                        </div>
+                        <div className="col-4">
+                            <a href="about_me.html">lihat semua</a>
+                        </div>
                     </div>
                     {top_berita.map((isi,i) => (
                         <div className="isi_berita_terkini">
                         <div className="col-md-12">
-                            <div className="col-md-2 nomor" style={{paddingRight:"35px", paddingLeft:"0px"}}>
-                                <h6>#{i+1}</h6>
+                            <div className="col-md-2 col-sm-3 nomor" style={{paddingRight:"35px", paddingLeft:"0px"}}>
+                                <h6 className="col-2" style={{textAlign:"center"}}>#{i+1}</h6>
                             </div>
                         </div>
                         <div className="judul">

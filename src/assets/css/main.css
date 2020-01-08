@@ -48,8 +48,9 @@
 
 .altalogo {
     padding: 0px;
-    display: ruby;
+    display: contents;
     padding-right: 0px;
+    margin-right: 20px;
 }
 
 .tengah {
@@ -137,7 +138,7 @@ p{
 }
 
 .kabarkabar h3{
-    margin: auto;
+    margin-right: 100px;
     padding: 0px 0px;
 }
 
@@ -172,10 +173,11 @@ border: 1px solid #cddc39;
 .berita_terkini h5 {
     color:#0B8887;
     padding-right: 210px;
-    padding-top: 5px;
+    padding-top: 10px;
     margin: auto;
     padding-left: 10px;
     font-size: 15px;
+    display: contents;
 }
 
 .berita_terkini a{
@@ -185,7 +187,7 @@ border: 1px solid #cddc39;
 
 .berita_terkini {
     margin-top: 100px;
-    display: block ruby;
+    display: flex;
     border: 1px solid #bdbdbd;
     -webkit-box-shadow: 2px 2px 2px 2px rgba(193,195,199,1);
     -moz-box-shadow: 2px 2px 2px 2px rgba(193,195,199,1);
@@ -207,8 +209,9 @@ border: 1px solid #cddc39;
     background-color: red;
     color: white;
     border-radius: 30%;
-    padding: 3px 5px;
+    padding: 3px 20px;
     padding-left: 10px;
+    text-align: center;
 }
 
 .judul a{
@@ -235,8 +238,7 @@ border: 1px solid #cddc39;
 }
 
 .detail_berita img {
-    width: 538px;
-    height: 350px;
+    width: inherit;
 }
 
 .bacaan_detail_berita {
@@ -244,9 +246,14 @@ border: 1px solid #cddc39;
 }
 
 .judul_detail {
+    color: #1F406C;
     padding: 10px 15px;
     padding-bottom: 0px;
     font-size: 18px;
+}
+
+.judul_detail a{
+    color: #1F406C;
 }
 
 .isi_detail {
@@ -271,12 +278,21 @@ border: 1px solid #cddc39;
     margin-bottom: 20px;
 }
 
+.nav_bar {
+    margin-left: 40px;
+}
+
 .love_share_down {
     background-color: #F7F7F7;
     display: ruby;
     padding-top: 10px;
     padding-bottom: 10px;
     border: 2px solid #F1F1F1 ;
+}
+
+.love_share_down li{
+    list-style-type: none;
+    display: inline;
 }
 
 .search_bar button{
@@ -287,6 +303,68 @@ border: 1px solid #cddc39;
 /* ------------------------------------------------------------------------------------------ */
 
 @media(max-width:991px) {
+
+    .altalogo {
+        padding: 0px;
+        display: block;
+        padding-bottom: 10px;
+    }
+
+    .judul a{
+        color: #009594;
+        margin-bottom: 0px;
+        font-size: 15px;
+        padding-left: 15px;
+    }
+
+    .judul_detail h4{
+        font-size: 12px;
+    }
+    
+    .judul_detail a{
+        font-size: 23px;
+    }
+
+    .berita_terkini h5 {
+        color:#0B8887;
+        padding-right: 210px;
+        padding-top: 5px;
+        margin: auto;
+        padding-left: 10px;
+        font-size: 14px;
+        display: ruby;
+    }
+
+    .berita_terkini a{
+        color: #89E3CB;
+        font-size: 15px;
+    }
+
+    .kumpulan_detail {
+        margin-top: 30px;
+    }
+
+    .berita_terkini {
+        margin-top: 155px;
+        display: block ruby;
+        border: 1px solid #bdbdbd;
+        -webkit-box-shadow: 2px 2px 2px 2px rgba(193,195,199,1);
+        -moz-box-shadow: 2px 2px 2px 2px rgba(193,195,199,1);
+        box-shadow: 2px 2px 2px 2px rgba(193,195,199,1);
+        padding: 10px;
+    }
+
+    .detail_berita {
+        margin-top: 20px;
+        border: 1px solid #bdbdbd;
+        -webkit-box-shadow: 2px 2px 2px 2px rgba(193,195,199,1);
+        -moz-box-shadow: 2px 2px 2px 2px rgba(193,195,199,1);
+        box-shadow: 2px 2px 2px 2px rgba(193,195,199,1);
+        margin-left: 0px;
+        padding-left: 0px;
+        padding-right: 0px;
+        margin-bottom: 30px;
+    }
 
     .my_name h1 {
         margin: 0 auto;
@@ -393,6 +471,53 @@ border: 1px solid #cddc39;
 }
 
 @media(max-width:767px) {
+    .kabarkabar h3{
+        margin-right: 0px;
+        padding: 0px 0px;
+    }
+
+    .nav_bar {
+        padding-bottom: 10px;
+        margin-left: 0px;
+    }
+
+    .search_bar {
+        padding: 10px 10px;
+    }
+
+    .judul a{
+        color: #009594;
+        margin-bottom: 0px;
+        font-size: 13px;
+        padding-left: 15px;
+    }
+
+    .kumpulan_detail {
+        margin-top: 30px;
+    }
+
+    .berita_terkini {
+        margin-top: 210px;
+        display: block ruby;
+        border: 1px solid #bdbdbd;
+        -webkit-box-shadow: 2px 2px 2px 2px rgba(193,195,199,1);
+        -moz-box-shadow: 2px 2px 2px 2px rgba(193,195,199,1);
+        box-shadow: 2px 2px 2px 2px rgba(193,195,199,1);
+        padding: 10px;
+    }
+
+    .detail_berita {
+        margin-top: 20px;
+        border: 1px solid #bdbdbd;
+        -webkit-box-shadow: 2px 2px 2px 2px rgba(193,195,199,1);
+        -moz-box-shadow: 2px 2px 2px 2px rgba(193,195,199,1);
+        box-shadow: 2px 2px 2px 2px rgba(193,195,199,1);
+        margin-left: 0px;
+        padding-left: 0px;
+        padding-right: 0px;
+        margin-bottom: 30px;
+    }
+
     .header-nav1,.foto img,.my_name a{
         margin: 0 auto;
         display: table;
