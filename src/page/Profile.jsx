@@ -15,7 +15,7 @@ class Profile extends React.Component {
 
   getApiResponse = () =>{
     axios
-        .post("https://react-challenge.free.beeceptor.com/")
+        .post("https://react-challenge1.free.beeceptor.com/")
         .then(function(response){
             store.setState({ name: response.data.name});
             
@@ -35,16 +35,16 @@ class Profile extends React.Component {
 
     this.getApiResponse()
     // console.log("cek state statusLogin", this.props.statusLogin);
-    // console.log("cek state name", this.props.name);
-    // console.log("cek state email", this.props.email);
-    // console.log("cek state api_key", this.props.api_key);
+    console.log("cek state name", this.props.name);
+    console.log("cek state email", this.props.email);
+    console.log("cek state api_key", this.props.api_key);
     if (this.props.statusLogin === false) {
       return <Redirect to={{ pathname: "/signin" }} />;
     } else {
       return (
         <React.Fragment>
           <Header />
-          <section className="content" style={{paddingTop:"100px",textAlign:"center"}}>
+          <section className="content" style={{paddingTop:"222px",textAlign:"center"}}>
             <h1
               style={{
                 textalign: "center"

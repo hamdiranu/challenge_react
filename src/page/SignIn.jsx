@@ -57,9 +57,9 @@ class SignIn extends React.Component {
       return (
         <div className="body">
           <Header/>
-          <div className="container" style={{textAlign:"center",paddingTop:"100px"}}>
+          <div className="container" style={{textAlign:"center"}}>
             <div className="col-md-4"></div>
-              <div className="col-md-4" style={{border:"1px solid",paddingTop:"30px",paddingBottom:"30px", borderRadius:"20%"}}>
+              <div className="col-md-4 kotak_sign_in" style={{marginTop:"222px"}}>
                 <h1>Sign In</h1>
                 <input type="text" placeholder="username"/><br/><br/>
                 <input type="password" placeholder="password"/><br/><br/>

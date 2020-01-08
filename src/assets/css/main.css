@@ -205,6 +205,14 @@ border: 1px solid #cddc39;
     padding-bottom: 10px;
 }
 
+.kotak_sign_in {
+    margin-top:"100px";
+    border: 1px solid;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    border-radius: 20%;
+}
+
 .nomor h6{
     background-color: red;
     color: white;
@@ -471,6 +479,15 @@ border: 1px solid #cddc39;
 }
 
 @media(max-width:767px) {
+
+    .kotak_sign_in {
+        margin-top:"222px";
+        border: 1px solid;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        border-radius: 20%;
+    }
+
     .kabarkabar h3{
         margin-right: 0px;
         padding: 0px 0px;
