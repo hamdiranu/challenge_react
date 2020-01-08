@@ -18,7 +18,6 @@ class Profile extends React.Component {
         .post("https://react-challenge1.free.beeceptor.com/")
         .then(function(response){
             store.setState({ name: response.data.name});
-            
             store.setState({ email: response.data.email});
             store.setState({ api_key: response.data.api_key});
             // handle success
