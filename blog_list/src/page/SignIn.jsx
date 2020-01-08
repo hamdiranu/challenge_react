@@ -3,6 +3,9 @@ import '../assets/css/main.css';
 import '../assets/css/bootstrap.min.css';
 import Header from '../component/header';
 
+import { withRouter } from "react-router-dom";
+import { connect } from "unistore/react";
+import { actions } from "../store";
 
 class SignIn extends React.Component {
   // state = { 
@@ -51,7 +54,7 @@ class SignIn extends React.Component {
                 <h1>Sign In</h1>
                 <input type="text" onChange = {e=> this.changeInput(e)} placeholder="username"/><br/><br/>
                 <input type="password" onChange = {e=> this.changeInput(e)} placeholder="password"/><br/><br/>
-                <button onClick={() => this.postLogin()}>Sign In</button>
+                <button onClick={() => this.props.getLogin()}>Sign In</button>
               </div>
             <div className="col-md-4"></div>
           </div>
@@ -60,4 +63,4 @@ class SignIn extends React.Component {
     }
   }
   
-  export default SignIn;
+  export default connect("", actions)(withRouter(SignIn));

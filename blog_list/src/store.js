@@ -13,6 +13,7 @@ const initialState = {
     isLoadingBeritaTerkini: true,
     isLoadingDetailBerita: true,
     category:"",
+    statusLogin:false,
     inputPage1:"",
     stateToChangeFromPage: "belum berubah"
 };
@@ -54,9 +55,15 @@ export const actions = store => ({
     },
 
     getOut : () => {
-        localStorage.removeItem("statusLogin");
+        store.setState({ statusLogin: false});
         // localStorage.clear()
         this.props.history.push("/");
+    },
+
+    getLogin : () => {
+        store.setState({ statusLogin: true});
+        // localStorage.clear()
+        this.props.history.push("/profile");
     },
 
     goBackHome : () => {

@@ -10,7 +10,7 @@ const Profile = props => {
   const name = localStorage.getItem("name");
   const email = localStorage.getItem("email");
   console.warn("statusLogin", statusLogin);
-  if (statusLogin === null) {
+  if (statusLogin === false) {
     return <Redirect to={{ pathname: "/signin" }} />;
   } else {
     return (
