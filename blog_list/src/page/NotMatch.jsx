@@ -2,8 +2,6 @@ import React from 'react';
 import '../assets/css/main.css';
 import '../assets/css/bootstrap.min.css';
 import Header from '../component/header';
-import BeritaTerkini from '../component/beritaTerkini';
-import DetailBerita from '../component/detail_berita';
 
 
 class Home extends React.Component {
@@ -12,6 +10,9 @@ class Home extends React.Component {
       return (
         <div className="body">
           <Header/>
+          <div className="container">
+            <div style={{marginTop:"100px", textAlign:"center"}}><h1>OPSS SORRY, NOT MATCH</h1></div>
+          </div>
         </div>
       );
     }

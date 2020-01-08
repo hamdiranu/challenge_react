@@ -1,7 +1,6 @@
 import React from 'react';
 import '../assets/css/bootstrap.min.css';
 import '../assets/css/main.css';
-import axios from "axios";
 
 class BeritaTerkini extends React.Component {
     render() {

@@ -26,7 +26,7 @@ class Home extends React.Component {
     console.warn("cek e pada handle input change", e.target)
     console.warn("cek value", e.target.value)
     let value = e.target.value;
-    await this.setState({ search:value});
+    await this.setState({ search:value, category:value});
     console.log("cek state input cek", this.state.search);
     this.getDetailBerita();
     this.getListberitaterkini();
@@ -37,7 +37,7 @@ class Home extends React.Component {
     console.warn("cek e pada handle input change", e.target)
     console.warn("cek value", e)
     let value = e;
-    await this.setState({ search:value});
+    await this.setState({ search:value, category:value});
     console.log("cek state input cek", this.state.search);
     this.getDetailBerita();
     this.getListberitaterkini();
@@ -60,6 +60,10 @@ class Home extends React.Component {
           // console.log(error)
       });
     };
+
+    goBackHome = () => {
+      this.setState({isLoadingBeritaTerkini : true});
+    }
 
     getListberitaterkini = () =>{
       const self = this;
@@ -92,7 +96,12 @@ class Home extends React.Component {
     else {
       return (
         <div className="body">
-          <Header doSearch={e => this.handleSearch(e)} doClick={e => this.handleClickKategori(e)} cari={this.state.search} {...this.props}/>
+          <Header 
+            doSearch={e => this.handleSearch(e)} 
+            doClick={e => this.handleClickKategori(e)} 
+            cari={this.state.search} 
+            goBackHome = {this.goBackHome}
+            {...this.props}/>
           <div className="container">
             <div className="row">
             <BeritaTerkini listberitaterkini={this.state.listBeritaTerkini} isLoading={this.state.isLoadingBeritaTerkini}/>

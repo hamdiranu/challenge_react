@@ -21,10 +21,10 @@ class Header extends React.Component {
                 <div className="row align-items-center">
                     <div className="col-md-3 col-sm-12 altalogo">
                         <div>
-                            <img src={logo} style={{width:"60px", height:"60px"}} className="App-logo" alt="logo" />
+                            <Link to="/" onClick={e => this.props.goBackHome()}><img src={logo} style={{width:"60px", height:"60px"}} className="App-logo" alt="logo" /></Link>
                         </div>
                         <div className="kabarkabar">
-                            <h3>KabarKabar</h3>
+                        <Link to="/" onClick={e => this.props.goBackHome()}><h3 style={{color:"#1F406C"}}>KabarKabar</h3></Link>
                         </div>
                     </div>
                     <div className="col-md-4 option1" style={{display:"block ruby"}}>
