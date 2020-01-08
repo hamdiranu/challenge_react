@@ -16,7 +16,7 @@ class Home extends React.Component {
         <div className="body">
           <Header/>
           <div className="container">
-            <div style={{marginTop:"100px", textAlign:"center"}}>
+            <div style={{marginTop:"222px", textAlign:"center"}}>
               <h1>THIS IS HOME</h1>
             </div>
           </div>
