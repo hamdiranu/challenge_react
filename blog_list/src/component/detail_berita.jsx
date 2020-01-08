@@ -2,13 +2,18 @@ import React from 'react';
 import '../assets/css/bootstrap.min.css';
 import '../assets/css/main.css';
 
+
+import { withRouter } from "react-router-dom";
+import { connect } from "unistore/react";
+import { actions } from "../store";
+
 class detailBerita extends React.Component {
         
         render() {
             
-        const random_berita = this.props.listDetail.filter((element,i) => i<=4)
+        const random_berita = this.props.listDetailBerita.filter((element,i) => i<=4)
 
-        if (this.props.isLoading === false) {
+        if (this.props.isLoadingDetailBerita === false) {
             return (
                 <div className="col-md-6 kumpulan_detail">
                     {random_berita.map((isi,i)=>(
@@ -53,4 +58,4 @@ class detailBerita extends React.Component {
     }
   }
   
-  export default detailBerita;
+  export default connect("listDetailBerita, isLoadingDetailBerita", actions)(withRouter(detailBerita));

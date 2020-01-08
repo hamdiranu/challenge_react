@@ -2,13 +2,18 @@ import React from 'react';
 import '../assets/css/bootstrap.min.css';
 import '../assets/css/main.css';
 
+
+import { withRouter } from "react-router-dom";
+import { connect } from "unistore/react";
+import { actions } from "../store";
+
 class BeritaTerkini extends React.Component {
     render() {
-        console.log("cek listberitaterkini", this.props.listberitaterkini);
+        console.log("cek listberitaterkini", this.props.listBeritaTerkini);
         
-        const top_berita = this.props.listberitaterkini.filter((element,i) => i<=4);
+        const top_berita = this.props.listBeritaTerkini.filter((element,i) => i<=4);
         console.log("cek list top berita", top_berita)
-        if (this.props.isLoading === false) {
+        if (this.props.isLoadingBeritaTerkini === false) {
             return (
                 <div className="col-md-5">
                     <div className="berita_terkini">
@@ -39,4 +44,4 @@ class BeritaTerkini extends React.Component {
     }
 }
   
-export default BeritaTerkini;
+export default connect("listBeritaTerkini, isLoadingBeritaTerkini", actions)(withRouter(BeritaTerkini));
