@@ -9,7 +9,6 @@ import { connect } from "unistore/react";
 import { actions } from "../store";
 
 class Home extends React.Component {
-
   render() {
     if (this.props.isLoadingBeritaTerkini === true || this.props.isLoadingDetailBerita === true) {
       return (
